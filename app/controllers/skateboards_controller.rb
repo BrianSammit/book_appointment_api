@@ -1,0 +1,2 @@
+class SkateboardsController < ApplicationController
+end

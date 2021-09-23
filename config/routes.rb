@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :skateboards
   resources :appointments
   resources :sessions, only: [:create]
   resources :registrations, only: [:create]
