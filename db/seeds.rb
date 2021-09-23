@@ -27,16 +27,21 @@ flip = Skateboard.create(brand: 'Flip')
 Appointment.create([{
     start_date: Time.parse('Nov 22 2021 0:00'), 
     end_date: Time.parse('Nov 23 2021 0:00'), 
-    user_id: brian.id
+    user_id: brian.id,
+    skateboard_id: elemnt.id
     },{
     start_date: Time.parse('Nov 22 2021 0:00'), 
     end_date: Time.parse('Nov 23 2021 0:00'),
-    user_id: natalia.id
+    user_id: natalia.id,
+    skateboard_id: zero.id
     },{
     start_date: Time.parse('Nov 22 2021 0:00'), 
     end_date: Time.parse('Nov 23 2021 0:00'), 
-    user_id: esteven.id
+    user_id: esteven.id,
+    skateboard_id: flip.id
     },{
     start_date: Time.parse('Nov 22 2021 0:00'), 
     end_date: Time.parse('Nov 23 2021 0:00'), 
-    user_id: jeymmy.id}  ])
+    user_id: jeymmy.id,
+    skateboard_id: santa_cruz.id }  ])
+    

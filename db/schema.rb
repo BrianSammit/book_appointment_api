@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 2021_09_23_023304) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.bigint "user_id", null: false
+    t.bigint "skateboard_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["skateboard_id"], name: "index_appointments_on_skateboard_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
@@ -38,5 +40,6 @@ ActiveRecord::Schema.define(version: 2021_09_23_023304) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "appointments", "skateboards"
   add_foreign_key "appointments", "users"
 end
