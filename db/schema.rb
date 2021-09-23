@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_09_23_023304) do
 
   create_table "skateboards", force: :cascade do |t|
     t.string "brand"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
