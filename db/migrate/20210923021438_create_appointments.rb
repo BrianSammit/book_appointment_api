@@ -3,7 +3,7 @@ class CreateAppointments < ActiveRecord::Migration[6.1]
     create_table :appointments do |t|
       t.datetime :start_date
       t.datetime :end_date
-      t.belong_to :user
+      t.belongs_to :users, null: false, foreign_key: true
 
       t.timestamps
     end

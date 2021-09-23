@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  start_date: 2021-09-22 21:05:07
-  end_date: 2021-09-22 21:05:07
-  user: 
+  start_date: 2021-09-22 21:14:38
+  end_date: 2021-09-22 21:14:38
+  users: one
 
 two:
-  start_date: 2021-09-22 21:05:07
-  end_date: 2021-09-22 21:05:07
-  user: 
+  start_date: 2021-09-22 21:14:38
+  end_date: 2021-09-22 21:14:38
+  users: two
