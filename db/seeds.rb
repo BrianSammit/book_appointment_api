@@ -27,21 +27,25 @@ flip = Skateboard.create(brand: 'Flip', image: "https://res.cloudinary.com/ddjes
 Appointment.create([{
     start_date: Time.parse('Nov 22 2021 0:00'), 
     end_date: Time.parse('Nov 23 2021 0:00'), 
+    city: 'Bogota',
     user_id: brian.id,
     skateboard_id: elemnt.id
     },{
     start_date: Time.parse('Nov 22 2021 0:00'), 
     end_date: Time.parse('Nov 23 2021 0:00'),
+    city: 'Bogota',
     user_id: natalia.id,
     skateboard_id: zero.id
     },{
     start_date: Time.parse('Nov 22 2021 0:00'), 
-    end_date: Time.parse('Nov 23 2021 0:00'), 
+    end_date: Time.parse('Nov 23 2021 0:00'),
+    city: 'Bogota', 
     user_id: esteven.id,
     skateboard_id: flip.id
     },{
     start_date: Time.parse('Nov 22 2021 0:00'), 
-    end_date: Time.parse('Nov 23 2021 0:00'), 
+    end_date: Time.parse('Nov 23 2021 0:00'),
+    city: 'Bogota', 
     user_id: jeymmy.id,
     skateboard_id: santa_cruz.id }  ])
     

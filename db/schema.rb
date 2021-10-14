@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_09_23_023304) do
   create_table "appointments", force: :cascade do |t|
     t.datetime "start_date"
     t.datetime "end_date"
+    t.string "city"
     t.bigint "user_id", null: false
     t.bigint "skateboard_id", null: false
     t.datetime "created_at", precision: 6, null: false
