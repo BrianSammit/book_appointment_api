@@ -61,5 +61,17 @@ RSpec.describe Appointment, type: :request do
       end
 
 
+      describe 'Post /appointments' do
+
+        it 'return all the skates' do
+
+            post '/appointments'
+            
+            expect(response).to have_http_status(:ok)
+        end
+          
+      end
+
+
     end
 end
