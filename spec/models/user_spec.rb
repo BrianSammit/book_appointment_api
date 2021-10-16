@@ -12,17 +12,22 @@ RSpec.describe User, type: :model do
   end
 
   it "is valid with valid attributes" do
-    user = User.new(username: 'Brian', email: 'brian@gmail.com', password: 'asdfasdf')
+    user = User.new(username: Faker::Name.name, email: Faker::Internet.email, password: Faker::Internet.password)
     expect(user).to be_valid
   end
 
   it "is not valid without an email" do
-    user = User.new(username: 'Brian', email: nil, password: 'asdfasdf')
+    user = User.new(username: Faker::Name.name, email: nil, password: Faker::Internet.password)
     expect(user).to_not be_valid
   end
 
-  it "is not valid without an email" do
-    user = User.new(username: 'Brian', email: 'brian@gmail.com', password: nil)
+  it "is not valid without an password" do
+    user = User.new(username: Faker::Name.name, email: Faker::Internet.email, password: nil)
+    expect(user).to_not be_valid
+  end
+
+  it "is not valid without an username" do
+    user = User.new(username: nil, email: Faker::Internet.email,  password: Faker::Internet.password)
     expect(user).to_not be_valid
   end
 

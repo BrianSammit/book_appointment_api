@@ -34,7 +34,6 @@ group :development, :test do
   gem 'rspec', '~> 3.10'
   gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
   gem 'faker'
-  gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
