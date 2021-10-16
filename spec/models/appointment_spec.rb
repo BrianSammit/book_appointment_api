@@ -19,36 +19,37 @@ RSpec.describe Appointment, type: :model do
 
   end
 
-  it "is valid with valid attributes" do
-    appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: Time.parse('Nov 23 2021 0:00'), city: 'Bogota', user_id: @user.id, skateboard_id: @skate.id)
-    expect(appointment).to be_valid
+  describe 'validations' do
+    it "is valid with valid attributes" do
+      appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: Time.parse('Nov 23 2021 0:00'), city: 'Bogota', user_id: @user.id, skateboard_id: @skate.id)
+      expect(appointment).to be_valid
+    end
+
+    it "is not valid without start date " do
+      appointment =  Appointment.create(start_date: nil, end_date: Time.parse('Nov 23 2021 0:00'), city: 'Bogota', user_id: @user.id, skateboard_id: @skate.id)
+      expect(appointment).to_not be_valid
+    end
+
+    it "is not valid without end date" do
+      appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: nil, city: 'Bogota', user_id: @user.id, skateboard_id: @skate.id)
+      expect(appointment).to_not be_valid
+    end
+
+    it "is not valid without city" do
+      appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: Time.parse('Nov 23 2021 0:00'), city: nil, user_id: @user.id, skateboard_id: @skate.id)
+      expect(appointment).to_not be_valid
+    end
+
+    it "is not valid without user id" do
+      appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: Time.parse('Nov 23 2021 0:00'), city: 'Bogota', user_id: nil, skateboard_id: @skate.id)
+      expect(appointment).to_not be_valid
+    end
+
+    it "is not valid without skate id" do
+      appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: Time.parse('Nov 23 2021 0:00'), city: 'Bogota', user_id: @user.id, skateboard_id: nil)
+      expect(appointment).to_not be_valid
+    end
+
   end
-
-  it "is valid with valid attributes" do
-    appointment =  Appointment.create(start_date: nil, end_date: Time.parse('Nov 23 2021 0:00'), city: 'Bogota', user_id: @user.id, skateboard_id: @skate.id)
-    expect(appointment).to_not be_valid
-  end
-
-  it "is valid with valid attributes" do
-    appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: nil, city: 'Bogota', user_id: @user.id, skateboard_id: @skate.id)
-    expect(appointment).to_not be_valid
-  end
-
-  it "is valid with valid attributes" do
-    appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: Time.parse('Nov 23 2021 0:00'), city: nil, user_id: @user.id, skateboard_id: @skate.id)
-    expect(appointment).to_not be_valid
-  end
-
-  it "is valid with valid attributes" do
-    appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: Time.parse('Nov 23 2021 0:00'), city: 'Bogota', user_id: nil, skateboard_id: @skate.id)
-    expect(appointment).to_not be_valid
-  end
-
-  it "is valid with valid attributes" do
-    appointment =  Appointment.create(start_date: Time.parse('Nov 22 2021 0:00'), end_date: Time.parse('Nov 23 2021 0:00'), city: 'Bogota', user_id: @user.id, skateboard_id: nil)
-    expect(appointment).to_not be_valid
-  end
-
-
 end
 
