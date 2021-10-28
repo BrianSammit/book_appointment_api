@@ -25,6 +25,26 @@ You can take a look to the [Front-end Repository here](https://github.com/BrianS
 
 You don't need an API key to access the data. So you can use this API.
 
+=======
+## Screenshot
+
+![](app/assets/images/Capture.JPG)
+
+## API
+
+<a href="https://skate-store-api.herokuapp.com">Check the API data here</a>
+
+## Built With
+
+- Ruby 3.0.2
+- Ruby on Rails  6.1.4.1
+- PostgreSQL
+- Rspec
+
+### API Documentation
+
+You don't need an API key to access the data. So you can use this API.
+
 
 **Allowed HTTPS requests:**
 
