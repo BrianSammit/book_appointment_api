@@ -13,7 +13,6 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require 'capybara/rspec'
 require 'shoulda/matchers'
 
 RSpec.configure do |config|
